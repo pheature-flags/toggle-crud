@@ -6,9 +6,9 @@ namespace Pheature\Crud\Toggle\Handler;
 
 use Pheature\Core\Toggle\Write\FeatureRepository;
 use Pheature\Core\Toggle\Write\Strategy;
-use Pheature\Crud\Toggle\Command\AddStrategy as AddStrategyCommand;
+use Pheature\Crud\Toggle\Command\SetStrategy as SetStrategyCommand;
 
-final class AddStrategy
+final class SetStrategy
 {
     private FeatureRepository $featureRepository;
 
@@ -17,12 +17,12 @@ final class AddStrategy
         $this->featureRepository = $featureRepository;
     }
 
-    public function handle(AddStrategyCommand $command): void
+    public function handle(SetStrategyCommand $command): void
     {
         $feature = $this->featureRepository->get($command->featureId());
 
-        $feature->addStrategy(
-            new Strategy($command->strategyId(), $command->strategyType())
+        $feature->setStrategy(
+            new Strategy($command->strategyId(), $command->strategyType(), $command->segments())
         );
 
         $this->featureRepository->save($feature);
