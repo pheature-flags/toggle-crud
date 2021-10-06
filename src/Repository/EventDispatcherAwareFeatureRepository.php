@@ -37,9 +37,11 @@ final class EventDispatcherAwareFeatureRepository implements FeatureRepository
         }
     }
 
-    public function remove(FeatureId $featureId): void
+    public function remove(Feature $feature): void
     {
-        $this->featureRepository->remove($featureId);
+        $this->featureRepository->remove($feature);
+
+        $this->dispatchEvents($feature->release());
     }
 
     public function get(FeatureId $featureId): Feature
