@@ -18,6 +18,10 @@ final class RemoveFeature
 
     public function handle(RemoveFeatureCommand $command): void
     {
-        $this->featureRepository->remove($command->featureId());
+        $feature = $this->featureRepository->get($command->featureId());
+
+        $feature->remove();
+
+        $this->featureRepository->remove($feature);
     }
 }

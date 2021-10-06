@@ -51,13 +51,14 @@ final class EventDispatcherAwareFeatureRepositoryTest extends TestCase
 
     public function testItShouldRemoveAFeature(): void
     {
-        $featureIdToRemove = FeatureId::fromString('a_feature_id');
+        $featureId = FeatureId::fromString('a_feature_id');
+        $featureToRemove = Feature::withId($featureId);
 
         $featureRepository = $this->createMock(FeatureRepository::class);
         $featureRepository
             ->expects($this->once())
             ->method('remove')
-            ->with($featureIdToRemove);
+            ->with($featureToRemove);
 
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         $eventDispatcher
@@ -66,7 +67,7 @@ final class EventDispatcherAwareFeatureRepositoryTest extends TestCase
 
         $repository = new EventDispatcherAwareFeatureRepository($featureRepository, $eventDispatcher);
 
-        $repository->remove($featureIdToRemove);
+        $repository->remove($featureToRemove);
     }
 
     public function testItShouldGetAFeatureByFeatureId(): void
