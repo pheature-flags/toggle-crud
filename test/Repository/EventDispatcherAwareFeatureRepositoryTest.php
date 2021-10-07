@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Pheature\Test\Crud\Toggle\Repository;
 
 use Pheature\Core\Toggle\Write\Event\FeatureWasCreated;
+use Pheature\Core\Toggle\Write\Event\FeatureWasRemoved;
 use Pheature\Core\Toggle\Write\Feature;
 use Pheature\Core\Toggle\Write\FeatureId;
 use Pheature\Core\Toggle\Write\FeatureRepository;
@@ -51,8 +52,8 @@ final class EventDispatcherAwareFeatureRepositoryTest extends TestCase
 
     public function testItShouldRemoveAFeature(): void
     {
-        $featureId = FeatureId::fromString('a_feature_id');
-        $featureToRemove = Feature::withId($featureId);
+        $featureToRemove = new Feature(FeatureId::fromString('a_feature_id'), false);
+        $featureToRemove->remove();
 
         $featureRepository = $this->createMock(FeatureRepository::class);
         $featureRepository
@@ -62,8 +63,14 @@ final class EventDispatcherAwareFeatureRepositoryTest extends TestCase
 
         $eventDispatcher = $this->createMock(EventDispatcherInterface::class);
         $eventDispatcher
-            ->expects($this->never())
-            ->method('dispatch');
+            ->expects($this->once())
+            ->method('dispatch')
+            ->with($this->callback(
+                function(object $event) {
+                    $this->assertInstanceOf(FeatureWasRemoved::class, $event);
+                    return true;
+                })
+            );
 
         $repository = new EventDispatcherAwareFeatureRepository($featureRepository, $eventDispatcher);
 
