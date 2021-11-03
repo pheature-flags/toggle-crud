@@ -25,7 +25,7 @@ final class SetStrategy
      * @param string $featureId
      * @param string $strategyId
      * @param string $strategyType
-     * @param array<array<string, mixed>> $segments
+     * @param array<array<string, string|array<string, mixed>>> $segments
      */
     private function __construct(string $featureId, string $strategyId, string $strategyType, array $segments)
     {
@@ -33,14 +33,17 @@ final class SetStrategy
         $this->strategyId = StrategyId::fromString($strategyId);
         $this->strategyType = StrategyType::fromString($strategyType);
         $this->segments = array_map(
-            /** @param array<string, mixed> $segment */
             static function (array $segment) {
                 /** @var array<string, mixed> $criteria */
                 $criteria =  $segment['criteria'];
+                /** @var string $segmentId */
+                $segmentId = $segment['segment_id'];
+                /** @var string $segmentType */
+                $segmentType = $segment['segment_type'];
 
                 return new Segment(
-                    SegmentId::fromString((string)$segment['segment_id']),
-                    SegmentType::fromString((string)$segment['segment_type']),
+                    SegmentId::fromString($segmentId),
+                    SegmentType::fromString($segmentType),
                     Payload::fromArray($criteria)
                 );
             },
@@ -52,7 +55,7 @@ final class SetStrategy
      * @param string $featureId
      * @param string $strategyId
      * @param string $strategyType
-     * @param array<array<string, mixed>> $segments
+     * @param array<array<string, string|array<string, mixed>>> $segments
      * @return static
      */
     public static function withIdTypeAndSegments(
