@@ -1,12 +1,24 @@
 # Changelog
 
-## [Unreleased](https://github.com/pheature-flags/toggle-crud/tree/HEAD)
+## [0.3.0](https://github.com/pheature-flags/toggle-crud/tree/0.3.0) (2021-11-20)
 
-[Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.2.0...0.3.0)
 
 **Implemented enhancements:**
 
+- \[toggle-crud\] Update PhpStan to version 1 and level 9 [\#16](https://github.com/pheature-flags/toggle-crud/issues/16)
+- \[toggle-crud\] Add PHP 8.1 support [\#13](https://github.com/pheature-flags/toggle-crud/issues/13)
 - Dispatch stored events inside a repository [\#9](https://github.com/pheature-flags/toggle-crud/issues/9)
+- \[\#13\] Add support for PHP 8.1 [\#20](https://github.com/pheature-flags/toggle-crud/pull/20) ([kpicaza](https://github.com/kpicaza))
+- \[\#16\] Update PhpStan to version 1 and level 9 [\#17](https://github.com/pheature-flags/toggle-crud/pull/17) ([kpicaza](https://github.com/kpicaza))
+
+**Closed issues:**
+
+- \[toggle-crud\] update CI matrix PHP versions [\#18](https://github.com/pheature-flags/toggle-crud/issues/18)
+
+**Merged pull requests:**
+
+- \[\#18\] Run CI both PHP 7.4 and 8.0 [\#19](https://github.com/pheature-flags/toggle-crud/pull/19) ([kpicaza](https://github.com/kpicaza))
 
 ## [0.2.0](https://github.com/pheature-flags/toggle-crud/tree/0.2.0) (2021-10-08)
 
