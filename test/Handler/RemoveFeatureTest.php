@@ -30,7 +30,7 @@ final class RemoveFeatureTest extends TestCase
         $repository->expects($this->once())
             ->method('remove')
             ->with($this->callback(function (Feature $feature) use ($expectedFeature) {
-                $this->assertEquals($expectedFeature, $feature);
+                $this->assertSame($expectedFeature, $feature);
 
                 return true;
             }));
