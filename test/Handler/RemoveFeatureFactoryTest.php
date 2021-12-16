@@ -20,13 +20,13 @@ final class RemoveFeatureFactoryTest extends TestCase
         $factory = new RemoveFeatureFactory();
         $actual = $factory->__invoke($mockedContainer);
 
-        self::assertInstanceOf(RemoveFeature::class, $actual);
+        $this->assertInstanceOf(RemoveFeature::class, $actual);
     }
 
     public function testItShouldCreateARemoveFeatureFromCreate(): void
     {
         $actual = RemoveFeatureFactory::create($this->createMock(FeatureRepository::class));
 
-        self::assertInstanceOf(RemoveFeature::class, $actual);
+        $this->assertInstanceOf(RemoveFeature::class, $actual);
     }
 }

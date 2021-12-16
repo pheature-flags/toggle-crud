@@ -19,13 +19,13 @@ class RemoveStrategyFactoryTest extends TestCase
         $factory = new RemoveStrategyFactory();
         $actual = $factory->__invoke($mockedContainer);
 
-        self::assertInstanceOf(RemoveStrategy::class, $actual);
+        $this->assertInstanceOf(RemoveStrategy::class, $actual);
     }
 
     public function testItShouldCreateARemoveStrategyFromCreate(): void
     {
         $actual = RemoveStrategyFactory::create($this->createMock(FeatureRepository::class));
 
-        self::assertInstanceOf(RemoveStrategy::class, $actual);
+        $this->assertInstanceOf(RemoveStrategy::class, $actual);
     }
 }
