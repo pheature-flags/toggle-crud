@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.0](https://github.com/pheature-flags/toggle-crud/tree/0.4.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.3.0...0.4.0)
+
+**Implemented enhancements:**
+
+- \[toggle-crud\] Update issue template for bugs using new issue form in a YAML file [\#10](https://github.com/pheature-flags/toggle-crud/issues/10)
+
+**Merged pull requests:**
+
+- allow executing some composer plugins in dev mode [\#25](https://github.com/pheature-flags/toggle-crud/pull/25) (@kpicaza)
+- \[\#10\] Update Bug Report Template [\#22](https://github.com/pheature-flags/toggle-crud/pull/22) (@pcs289)
+- Improve assertion methods call for consistency [\#21](https://github.com/pheature-flags/toggle-crud/pull/21) (@peter279k)
+
 ## [0.3.0](https://github.com/pheature-flags/toggle-crud/tree/0.3.0) (2021-11-20)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.2.0...0.3.0)
@@ -31,28 +45,6 @@
 ## [v0.1.2](https://github.com/pheature-flags/toggle-crud/tree/v0.1.2) (2021-09-25)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/v0.1.1...v0.1.2)
-
-**Fixed bugs:**
-
-- \[toggle-crud\] Fix dev dependency issues [\#264](https://github.com/pheature-flags/pheature-flags/issues/264)
-- \[\#264\]\[toggle-crud\] fix dependency issue in toggle crud [\#268](https://github.com/pheature-flags/pheature-flags/pull/268) (@kpicaza)
-- \[toggle-crud-psr7-api\] fix typo [\#262](https://github.com/pheature-flags/pheature-flags/pull/262) (@kpicaza)
-
-**Closed issues:**
-
-- \[toggle-crud-psr7-api\] Add maintainability badge  [\#238](https://github.com/pheature-flags/pheature-flags/issues/238)
-
-**Merged pull requests:**
-
-- \[toggle-crud-psr11-factories\] add psalm badge [\#260](https://github.com/pheature-flags/pheature-flags/pull/260) (@kpicaza)
-- \[toggle-crud-psr11-factories\] add mutation badge [\#259](https://github.com/pheature-flags/pheature-flags/pull/259) (@kpicaza)
-- \[toggle-crud-psr11-factories\] add code climate badge [\#258](https://github.com/pheature-flags/pheature-flags/pull/258) (@kpicaza)
-- \[toggle-crud-psr11-factories\] add packagist version badge [\#257](https://github.com/pheature-flags/pheature-flags/pull/257) (@kpicaza)
-- \[toggle-crud-psr11-factories\] add scrutinizer badge [\#256](https://github.com/pheature-flags/pheature-flags/pull/256) (@kpicaza)
-- \[toggle-crud-psr7-api\] add codeclimate badge [\#239](https://github.com/pheature-flags/pheature-flags/pull/239) (@kpicaza)
-- \[toggle-crud-psr7-api\] add scrutinizer badge [\#237](https://github.com/pheature-flags/pheature-flags/pull/237) (@kpicaza)
-- \[toggle-crud-psr-7-api\] add codecov badge [\#236](https://github.com/pheature-flags/pheature-flags/pull/236) (@kpicaza)
-- \[toggle-crud-psr-7-api\] add striker mutation badge [\#235](https://github.com/pheature-flags/pheature-flags/pull/235) (@kpicaza)
 
 ## [v0.1.1](https://github.com/pheature-flags/toggle-crud/tree/v0.1.1) (2021-06-20)
 
