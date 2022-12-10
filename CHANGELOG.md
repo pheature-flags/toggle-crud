@@ -1,6 +1,15 @@
 # Changelog
 
-## [0.5.0](https://github.com/pheature-flags/toggle-crud/tree/0.5.0)
+## [0.7.0](https://github.com/pheature-flags/toggle-crud/tree/0.7.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.5.0...0.7.0)
+
+**Merged pull requests:**
+
+- \[\#359\] Add PHP 8.2 support [\#32](https://github.com/pheature-flags/toggle-crud/pull/32) (@kpicaza)
+- update dev dependencies [\#29](https://github.com/pheature-flags/toggle-crud/pull/29) (@kpicaza)
+
+## [0.5.0](https://github.com/pheature-flags/toggle-crud/tree/0.5.0) (2022-08-12)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.4.0...0.5.0)
 
