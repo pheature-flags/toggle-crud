@@ -1,6 +1,15 @@
 # Changelog
 
-## [0.7.1](https://github.com/pheature-flags/toggle-crud/tree/0.7.1)
+## [0.8.0](https://github.com/pheature-flags/toggle-crud/tree/0.8.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.7.1...0.8.0)
+
+**Merged pull requests:**
+
+- update psalm to 5.16 [\#37](https://github.com/pheature-flags/toggle-crud/pull/37) (@kpicaza)
+- update php versions support [\#36](https://github.com/pheature-flags/toggle-crud/pull/36) (@kpicaza)
+
+## [0.7.1](https://github.com/pheature-flags/toggle-crud/tree/0.7.1) (2022-12-12)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-crud/compare/0.7.0...0.7.1)
 
