@@ -37,5 +37,6 @@ final class RemoveFeatureTest extends TestCase
 
         $handler = new RemoveFeature($repository);
         $handler->handle($command);
+        $this->assertCount(2, $expectedFeature->release());
     }
 }
